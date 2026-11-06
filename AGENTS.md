@@ -516,17 +516,17 @@ Context-efficient PR comment handling. **Evaluate → Decide → Act.** Fix impo
 
 ```bash
 # 1. Get unreplied comments (start here)
-bun run .opencode/skills/pr-triage/scripts/pr-comments.ts unreplied owner/repo 42
+bun run .opencode/skill/pr-triage/scripts/pr-comments.ts unreplied owner/repo 42
 
 # 2. Evaluate: fetch body for important files only
-bun run .opencode/skills/pr-triage/scripts/pr-comments.ts expand owner/repo 123456
+bun run .opencode/skill/pr-triage/scripts/pr-comments.ts expand owner/repo 123456
 
 # 3. Decide & Act:
 #    - Important issue? FIX IT in code, then:
-bun run .opencode/skills/pr-triage/scripts/pr-comments.ts reply owner/repo 42 123456 "✅ Fixed in abc123"
+bun run .opencode/skill/pr-triage/scripts/pr-comments.ts reply owner/repo 42 123456 "✅ Fixed in abc123"
 
 #    - Not important? Resolve silently:
-bun run .opencode/skills/pr-triage/scripts/pr-comments.ts resolve owner/repo 42 123456
+bun run .opencode/skill/pr-triage/scripts/pr-comments.ts resolve owner/repo 42 123456
 ```
 
 **Skip these (resolve silently):**
